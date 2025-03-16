@@ -8,7 +8,9 @@ import plotly.express as px
 #loading the dataset
 csv_url = "https://github.com/Flamingo-Rocker/2024-Spotify-Top-Songs-Analysis/blob/main/Most%20Streamed%20Spotify%20Songs%202024.csv"
 spotify_data = pd.read_csv(
-    csv_url, 
+    csv_url,
+    sep=',',
+    on_bad_lines='skip',
     encoding='ISO-8859-1'
 )
 
