@@ -73,8 +73,7 @@ year_range = st.slider(
 
 filtered_histodata = spotify_data[
     (spotify_data['release_year'] >= year_range[0]) &
-    (spotify_data['release_year'] <= year_range[1]) 
-]
+    (spotify_data['release_year'] <= year_range[1])]
 
 # Create plotly express histogram showing distribution of most streamed songs in 2024 by release year]
 fig = px.histogram(
