@@ -1,12 +1,14 @@
 #app.py
+'''This app  will analyze data on the top songs streamed on Spotify in 2024.'''
 #importing the necessary libraries
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 
 #loading the dataset
+csv_url = "https://github.com/Flamingo-Rocker/2024-Spotify-Top-Songs-Analysis/blob/main/Most%20Streamed%20Spotify%20Songs%202024.csv"
 spotify_data = pd.read_csv(
-    r"C:\Users\sethc\github_projects\2024-Spotify-Top-Songs-Analysis\Most Streamed Spotify Songs 2024.csv", 
+    csv_url, 
     encoding='ISO-8859-1'
 )
 
