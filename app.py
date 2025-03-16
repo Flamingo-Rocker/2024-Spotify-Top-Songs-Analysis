@@ -6,7 +6,7 @@ import pandas as pd
 import plotly.express as px
 
 #loading the dataset
-csv_url = "https://github.com/Flamingo-Rocker/2024-Spotify-Top-Songs-Analysis/blob/main/Most%20Streamed%20Spotify%20Songs%202024.csv"
+csv_url = "https://raw.githubusercontent.com/Flamingo-Rocker/2024-Spotify-Top-Songs-Analysis/main/Most%20Streamed%20Spotify%20Songs%202024.csv"
 spotify_data = pd.read_csv(
     csv_url,
     sep=',',
@@ -21,7 +21,6 @@ spotify_data.columns = (
     .str.replace(r"[^\w\s]", "", regex=True)  # Remove special characters
     .str.replace(r"\s+", "_", regex=True) #convert to snake case
 )
-
 # Convert all_time_rank to integer
 spotify_data['spotify_streams'] = spotify_data['spotify_streams'].str.replace(',', '').astype('Int64')
 spotify_data['spotify_playlist_reach'] = spotify_data['spotify_playlist_reach'].str.replace(',', '').astype('Int64')
